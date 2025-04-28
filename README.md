@@ -120,6 +120,7 @@ sudo apt-get -y install libcusparselt0 libcusparselt-dev
 sudo python3 -m pip install --no-cache https://github.com/SnapDragonfly/pytorch/releases/download/v2.5.1%2Bl4t35.6-cp38-cp38-aarch64/torch-2.5.1+l4t36.4-cp310-cp310-linux_aarch64.whl
 
 pip3 show torch 
+
 version: 2.5.1+l4t36.4 
 
  
