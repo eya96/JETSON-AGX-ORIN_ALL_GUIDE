@@ -1,4 +1,4 @@
-# JETSON-AGX-ORIN_ALL_GUIDE:Flashing Jetson AGX ORIN with Virtual Machine and Run different Samples:
+# JETSON-AGX-ORIN_ALL_GUIDE:Flashing Jetson AGX ORIN with Virtual Machine and Run different Samples / Pytorch for Jetpack 6.2:
 Nvidia Support GUIDE uses Native Ubuntu, But we can use Virtualmachine instaed let's go:
 
 System Requirements: 
@@ -103,10 +103,17 @@ First we have to mount the tensorrt root within the container:
    Result=PASS
      
      
-    
+**Pytorch for Jetpack 6.2**
 
+sudo wget https://developer.download.nvidia.com/compute/cusparselt/0.7.1/local_installers/cusparselt-local-tegra-repo-ubuntu2204-0.7.1_1.0-1_arm64.deb
+sudo dpkg -i cusparselt-local-tegra-repo-ubuntu2204-0.7.1_1.0-1_arm64.deb
+sudo cp var/cusparselt-local-tegra-repo-ubuntu2204-0.7.1/cusparselt-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install libcusparselt0 libcusparselt-dev
+sudo python3 -m pip install --no-cache https://github.com/SnapDragonfly/pytorch/releases/download/v2.5.1%2Bl4t35.6-cp38-cp38-aarch64/torch-2.5.1+l4t36.4-cp310-cp310-linux_aarch64.whl
 
-
+pip3 show torch 
+version: 2.5.1+l4t36.4 
 
  
 
