@@ -1,4 +1,4 @@
-# JETSON-AGX-ORIN_ALL_GUIDE:Flashing Jetson AGX ORIN with Virtual Machine and Run different Samples / Pytorch for Jetpack 6.2:
+# JETSON-AGX-ORIN_ALL_GUIDE:Flashing Jetson AGX ORIN with Virtual Machine / Run different Samples / Pytorch for Jetpack 6.2:
 Nvidia Support GUIDE uses Native Ubuntu, But we can use Virtualmachine instaed let's go:
 
 System Requirements: 
