@@ -4,11 +4,12 @@ Nvidia Support GUIDE uses Native Ubuntu, But we can use Virtualmachine instaed l
 System Requirements: 
 
 -Virtual Machine (VM) Vmware player Workstation 17 (via this link: https://www.techspot.com/downloads/189-vmware-workstation-for-windows.html with  Ubuntu kernel version 22.04
- Don't use VirtualBox ==>> fails to flash ( I had a lot of errors in the Python file Tegra.py )
- 
- 
 
-Install SDKMANAGER software :
+-Don't use VirtualBox ==>> fails to flash ( I had a lot of errors in the Python file Tegra.py )
+ 
+ 
+**Install SDKMANAGER software :**
+
 -Install SDKManager version 2.2.0, you can follow the steps indicated in the link here(https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html)
 -We used the latset version of JETPACK (JETPACK 6.2) 
 
@@ -21,9 +22,7 @@ Install SDKMANAGER software :
     sudo apt upgarde 
     sudo install nvidia-jetpack 
 
-Docker Trial:
-
-For Jetpack 6.2: 
+**Docker Container For Jetpack 6.2:**
 
 there are no Docker installed with the JETPACK 6.2, we need to installed it manually: 
 
@@ -85,7 +84,7 @@ First we have to mount the tensorrt root within the container:
  
 **Test CUDA Samples( DeviceQuery)** (12.6 VERSION)
 
- -for Jetpack 6.2 is different than other previous verions because not all samples are tested with jetpack 6.2:
+ -For Jetpack 6.2 is different than other previous verions because not all samples are tested with jetpack 6.2:
    First we have to install cuda-samples from this github link:https://github.com/NVIDIA/cuda-samples, and then run these command lines: 
 
      xhost +
