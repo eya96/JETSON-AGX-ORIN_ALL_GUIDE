@@ -38,7 +38,7 @@ and That's all,
 
 
 
-Follow this link  from Nvidia catalog, to launch the docker container: 
+Follow this link from Nvidia catalog, to launch the docker container: 
 
  1-Allow external applications to connect to the host's X display:
      xhost +
@@ -47,7 +47,8 @@ Follow this link  from Nvidia catalog, to launch the docker container:
 
 
 **RUN some Samples:**  
-  **Test VPI samples** Test (Vision Progamming Interface: Library for image processing, uses diffrent backend; pva, cuda, cpu, vic)
+
+  **Test VPI samples** (VPI: Vision Progamming Interface: Library for image processing, uses diffrent backend; pva, cuda, cpu, vic)
    (Convolution / Edge detection / image conversion...)
    apt install cmake
    cp -r /opt/nvidia/vpi*/samples /tmp
@@ -58,6 +59,11 @@ Follow this link  from Nvidia catalog, to launch the docker container:
    make -j4
   ./vpi_sample_01_convolve_2d cuda /opt/nvidia/vpi2/samples/assets/kodim08.png
   ./vpi_sample_01_convolve_2d cpu /opt/nvidia/vpi2/samples/assets/kodim08.png
+
+ Result: IMAGE WE CAN show it by 
+   
+  sudo apt-get install eog
+  eog img.png 
   
  **Test CUDNN Samples(MnistClassification)**
  First we have to install with the container:
@@ -69,15 +75,14 @@ Follow this link  from Nvidia catalog, to launch the docker container:
     ./conv_sample
 Result of classifcation for (ex. 1 3 5)
 Test passed 
+
 **Test TensoRT**
 First we have to mount the tensorrt root within the container: 
     sudo docker run -it --rm --net=host --runtime nvidia  DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix -v /usr/srs/tensorrt:/workspace/TensorRT  nvcr.io/nvidia/l4t-jetpack:r36.4.0
     cd /workspace/TensorRT/samples/sampleOnnxMNIST
     make
     ./sample_onnx_mnist
-
-
-
+ 
 **Test CUDA Samples( DeviceQuery)** (12.6 VERSION)
 
  -for Jetpack 6.2 is different than other previous verions because not all samples are tested with jetpack 6.2:
