@@ -105,6 +105,8 @@ First we have to mount the tensorrt root within the container:
      
 **Pytorch for Jetpack 6.2**
 
+Run these command lines: 
+
 sudo wget https://developer.download.nvidia.com/compute/cusparselt/0.7.1/local_installers/cusparselt-local-tegra-repo-ubuntu2204-0.7.1_1.0-1_arm64.deb
 sudo dpkg -i cusparselt-local-tegra-repo-ubuntu2204-0.7.1_1.0-1_arm64.deb
 sudo cp var/cusparselt-local-tegra-repo-ubuntu2204-0.7.1/cusparselt-*-keyring.gpg /usr/share/keyrings/
